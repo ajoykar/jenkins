@@ -13,3 +13,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:2.479.2-1
 
+Get Initial Pass
+sudo docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+
+Browse: http://localhost:8080
