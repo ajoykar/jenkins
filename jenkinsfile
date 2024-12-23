@@ -1,0 +1,41 @@
+pipeline {
+    agent {
+        node {
+            label 'docker-agent-python'
+        }
+    }
+    
+    triggers {
+        pollscm 'H/5 * * * *'
+    }
+
+    stages {
+        
+        stage ("Build") {
+            steps {
+                echo "Building...."
+                sh '''
+                echo "doing building stuff"
+                '''
+            }
+        }
+        
+        stage ("Test") {
+            steps {
+                echo "Testing...."
+                sh '''
+                echo "testing stuff "
+                '''
+            }
+        }
+        
+        stage ("Deploy") {
+            steps {
+                echo "Deploying"
+                sh '''
+                echo "Perform deployments stuffs"
+                '''
+            }
+        }
+     }
+}
