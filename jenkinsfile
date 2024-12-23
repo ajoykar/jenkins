@@ -6,7 +6,7 @@ pipeline {
     }
     
     triggers {
-        pollSCM 'H/2 * * * *'
+        pollSCM 'H/1 * * * *'
     }
 
     stages {
@@ -15,8 +15,10 @@ pipeline {
             steps {
                 echo "Ajoy kar Test Building...."
                 sh '''
+                USER root
                 cd test-app
                 apt-get install -y lsb-release python3-fire
+                USER jenkins
                 '''
             }
         }
