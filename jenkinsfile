@@ -16,7 +16,7 @@ pipeline {
                 echo "Ajoy kar Test Building...."
                 sh '''
                 cd test-app
-                pip install fire
+                pip install -r requirements.txt
                 '''
             }
         }
