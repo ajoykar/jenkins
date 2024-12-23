@@ -6,7 +6,7 @@ pipeline {
     }
     
     triggers {
-        pollSCM 'H/4 * * * *'
+        pollSCM 'H/2 * * * *'
     }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
                 echo "Ajoy kar Test Building...."
                 sh '''
                 cd test-app
-                apt install -y python3-requirement.txt
+                apt-get install -y lsb-release python3-fire
                 '''
             }
         }
