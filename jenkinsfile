@@ -13,7 +13,7 @@ pipeline {
         
         stage ("Build") {
             steps {
-                echo "Test Building...."
+                echo "Ajoy Test Building...."
                 sh '''
                 echo "doing building stuff"
                 '''
