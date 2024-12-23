@@ -16,8 +16,8 @@ pipeline {
                 echo "Ajoy kar Test Building...."
                 sh '''
                 cd test-app
-                python3 -m venv .venv
-s               ource .venv/bin/activate
+                apt install python3.11-venv
+                source .venv/bin/activate
                 python3 -m pip install -r requirements.txt
                 '''
             }
